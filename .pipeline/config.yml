@@ -1,0 +1,4 @@
+steps:
+  integrationArtifactDeploy:
+    cpiApiServiceKeyCredentialsId: roverpocServiceKeyCred
+    integrationFlowId: Coupa_To_S4HANA_CoupaTreasuryStatements_2
