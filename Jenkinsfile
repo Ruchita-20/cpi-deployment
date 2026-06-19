@@ -1,12 +1,13 @@
-@Library('piper-lib') _
-
-node {
-    stage('Init') {
-        deleteDir()
-        checkout scm
+pipeline {
+    agent {
+        label 'linux'
     }
 
-    stage('Deploy') {
-        integrationArtifactDeploy script: this
+    stages {
+        stage('Deploy') {
+            steps {
+                integrationArtifactDeploy(...)
+            }
+        }
     }
 }
