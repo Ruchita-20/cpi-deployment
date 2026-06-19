@@ -1,6 +1,6 @@
 @Library('piper-lib') _
 
-node {
+node() {
     stage('Init') {
         deleteDir()
         checkout scm
