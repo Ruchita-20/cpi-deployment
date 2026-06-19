@@ -1,12 +1,10 @@
 @Library('piper-lib') _
 
 node() {
-    stage('Init') {
-        deleteDir()
-        checkout scm
-    }
-
-    stage('Deploy') {
-        integrationArtifactDeploy script: this
-    }
-}
+  stage('init') {
+    deleteDir()
+    checkout scm
+  }
+  stage('deployIntegrationArtifact Command') {
+       integrationArtifactDeploy script: this
+  }
