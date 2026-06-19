@@ -1,8 +1,12 @@
+@Library('piper-lib') _
+
 node {
-    stage('Check') {
-        bat 'echo %PATH%'
-        bat 'where git'
-        bat 'where sh'
-        bat 'sh --version'
+    stage('Init') {
+        deleteDir()
+        checkout scm
+    }
+
+    stage('Deploy') {
+        integrationArtifactDeploy script: this
     }
 }
