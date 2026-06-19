@@ -8,3 +8,4 @@ node() {
   stage('deployIntegrationArtifact Command') {
        integrationArtifactDeploy script: this
   }
+}
